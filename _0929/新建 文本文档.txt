@@ -1,0 +1,12 @@
+<< fixed << showpoint <<setprecision(2) <<
+
+C++中默认不显示浮点数后的零，即使保留了小数点后的数字，可以用以上代码保留浮点数后的零
+https://docs.oldtimes.me/c.biancheng.net/view/1342.html#:~:text=C++%20showpo
+
+
+
+【id:428】【20分】A. 奖金提成
+【id:426】【20分】B. 距离年底有多少天
+【id:424】【20分】C. 箱子匹配	*
+【id:425】【20分】D. 连连看	***
+【id:427】【20分】E. 实验3-11 求一元二次方程的根	**
