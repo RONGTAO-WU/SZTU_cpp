@@ -237,58 +237,54 @@ using namespace std;
 
 
 
-//#include <iomanip>
-//
-//double D = 6.2619;
-//double E = 6.6744;
-//double Y = 0.0516;
-//double H = 0.92;
-//
-//double _exchange(char type, double tity)
-//{
-//	char* p = &type;
-//
-//	if (*p == 'D')
-//	{
-//		return tity * D;
-//	}
-//	else
-//		if (*p == 'E')
-//		{
-//			return tity * E;
-//		}
-//		else
-//			if (*p == 'Y')
-//			{
-//				return tity * Y;
-//			}
-//			else
-//				if (*p == 'H')
-//				{
-//					return tity * H;
-//				}
-//
-//}
-//
-//int main()
-//{
-//	int t;
-//	cin >> t;
-//
-//	for (int i = 0; i < t; i++)
-//	{
-//		char  type = 0;
-//		double tity = 0.0;
-//
-//		cin >> type >> tity;
-//
-//		double a = _exchange(type, tity);
-//
-//		cout << fixed << setprecision(4) << a << endl;
-//	}
-//
-//	return 0;
-//}
+#include <iomanip>
+
+const double D = 6.2619;
+const double E = 6.6744;
+const double Y = 0.0516;
+const double H = 0.92;
+
+void _exchange(char type, const double*& p)						// 引用	！！！也可以用二级指针
+{
+	
+	switch (type)
+	{
+	case 'D': p = &D;
+		break;
+	case 'E': p = &E;
+		break;
+	case 'Y': p = &Y;
+		break;
+	case 'H': p = &H;
+		break;
+
+	}
+
+}
+
+int main()
+{
+	int t;
+	cin >> t;
+
+	const double* p = new double();
+
+	for (int i = 0; i < t; i++)
+	{
+
+		char  type = 0;
+		double tity;
+
+		cin >> type >> tity;
+
+		
+		_exchange(type,p);
+
+		cout << fixed << setprecision(4) << *p * tity << endl;
+	}
+
+	return 0;
+}
 
 
 
@@ -421,29 +417,59 @@ using namespace std;
 
 
 
-int main()
-{
-	int t;
-	cin >> t;
-
-	for (int i = 0; i < t; i++)
-	{
-		char s;
-		int n;
-		cin >> s >> n;
-
-		int* p = new(n);
-		/*if(s == 'I')
-		else
-			if(s == 'C')
-			else
-				if(s == 'F')*/
-
-
-	}
-
-
-
-
-	return 0;
-}
+//int main()
+//{
+//	int t;
+//	cin >> t;
+//
+//	for (int i = 0; i < t; i++)
+//	{
+//		char s;
+//		int n;
+//		cin >> s >> n;
+//
+//		int* p = new int(n);
+//
+//		if (s == 'I')
+//		{
+//			int num;
+//			for (int i = 0; i < n; i++)
+//			{
+//				cin >> *(p + i);
+//				num += *(p + i);
+//			}
+//			num /= n;
+//			cout << num << endl;
+//		}
+//		else
+//			if (s == 'C')
+//			{
+//				char max = *p;
+//				for (int i = 0; i < n; i++)
+//				{
+//					cin >> *(p + i);
+//					if (max < *(p + i))
+//						max = *(p + i);
+//				}
+//				cout << max << endl;
+//			}
+//			else
+//				if (s == 'F')
+//				{
+//					int min = *p;
+//					for (int i = 0; i < n; i++)
+//					{
+//						cin >> *(p + i);
+//						if (min > *(p + i))
+//							min = *(p + i);
+//					}
+//					cout << min << endl;
+//				}
+//
+//
+//	}
+//
+//
+//
+//	return 0;
+//}

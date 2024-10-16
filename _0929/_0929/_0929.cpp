@@ -121,38 +121,38 @@ using namespace std;
 
 
 
-//int main()
-//{
-//	int year, month, day;
-//	cin >> year >> month >> day;
-//	int num = 0;
-//
-//	switch (month)
-//	{
-//	case 1:num += 31;
-//	case 2:num += 28;
-//		if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
-//			num++;
-//	case 3:num += 31;
-//	case 4:num += 30;
-//	case 5:num += 31;
-//	case 6:num += 30;
-//	case 7:num += 31;
-//	case 8:num += 31;
-//	case 9:num += 30;
-//	case 10:num += 31;
-//	case 11:num += 30;
-//	case 12:num += 31;
-//	
-//	}
-//
-//	
-//		cout << num - day << endl;
-//
-//
-//
-//	return 0;
-//}
+int main()
+{
+	int year, month, day;
+	cin >> year >> month >> day;
+	int num = 0;
+
+	switch (month)
+	{
+	case 1:num += 31;
+	case 2:num += 28;
+		if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+			num++;
+	case 3:num += 31;
+	case 4:num += 30;
+	case 5:num += 31;
+	case 6:num += 30;
+	case 7:num += 31;
+	case 8:num += 31;
+	case 9:num += 30;
+	case 10:num += 31;
+	case 11:num += 30;
+	case 12:num += 31;
+	
+	}
+
+	
+		cout << num - day << endl;
+
+
+
+	return 0;
+}
 
 
 
@@ -337,45 +337,45 @@ using namespace std;
 
 
 
-#define _jud  sqrt(pow(b, 2) - 4 * a * c)
-#define i_jud  sqrt(4 * a * c - pow(b,2))
-
-#include<math.h>
-#include <iomanip>
-
-int main()
-{
-	double a, b, c;
-
-	cin >> a >> b >> c;
-
-
-	if (a == 0 && b == 0 && c == 0)
-		cout << "Zero Equation" << endl;
-	else
-		if (a == 0 && b == 0 && c != 0)
-			cout << "Not An Equation" << endl;
-	else
-		if ( _jud > 0)
-		{
-			(-b + _jud) / (2 * a) > (-b - _jud) / (2 * a) ?
-				cout << fixed << setprecision(2) << (-b + _jud) / (2 * a) << endl << (-b - _jud) / (2 * a) << endl
-
-				: cout << fixed  <<setprecision(2) <<(- b - _jud) / (2 * a) << endl  << ( - b + _jud) / (2 * a) << endl;
-		}
-		else if (_jud == 0)
-		{
-			cout << fixed << setprecision(2) <<( - b + _jud) / (2 * a) << endl;
-		}
-		else if (_jud < 0)
-		{
-			(-b + i_jud) / (2 * a) > (-b - i_jud) / (2 * a) ?
-				cout << fixed << setprecision(2) << (-b / (2 * a)) << "+" << (i_jud) / (2 * a) << "i" << endl << (-b / (2 * a)) << "+" << (-i_jud) / (2 * a) << "i" << endl
-
-				: cout << fixed << setprecision(2) << (-b / (2 * a)) << "+" << (-i_jud) / (2 * a) << "i" << endl << (-b / (2 * a)) << "+" << (i_jud) / (2 * a) << "i" << endl;
-		}
-
-
-
-	return 0;
-}
+//#define _jud  sqrt(pow(b, 2) - 4 * a * c)
+//#define i_jud  sqrt(4 * a * c - pow(b,2))
+//
+//#include<math.h>
+//#include <iomanip>
+//
+//int main()
+//{
+//	double a, b, c;
+//
+//	cin >> a >> b >> c;
+//
+//
+//	if (a == 0 && b == 0 && c == 0)
+//		cout << "Zero Equation" << endl;
+//	else
+//		if (a == 0 && b == 0 && c != 0)
+//			cout << "Not An Equation" << endl;
+//	else
+//		if ( _jud > 0)
+//		{
+//			(-b + _jud) / (2 * a) > (-b - _jud) / (2 * a) ?
+//				cout << fixed << setprecision(2) << (-b + _jud) / (2 * a) << endl << (-b - _jud) / (2 * a) << endl
+//
+//				: cout << fixed  <<setprecision(2) <<(- b - _jud) / (2 * a) << endl  << ( - b + _jud) / (2 * a) << endl;
+//		}
+//		else if (_jud == 0)
+//		{
+//			cout << fixed << setprecision(2) <<( - b + _jud) / (2 * a) << endl;
+//		}
+//		else if (_jud < 0)
+//		{
+//			(-b + i_jud) / (2 * a) > (-b - i_jud) / (2 * a) ?
+//				cout << fixed << setprecision(2) << (-b / (2 * a)) << "+" << (i_jud) / (2 * a) << "i" << endl << (-b / (2 * a)) << "+" << (-i_jud) / (2 * a) << "i" << endl
+//
+//				: cout << fixed << setprecision(2) << (-b / (2 * a)) << "+" << (-i_jud) / (2 * a) << "i" << endl << (-b / (2 * a)) << "+" << (i_jud) / (2 * a) << "i" << endl;
+//		}
+//
+//
+//
+//	return 0;
+//}
